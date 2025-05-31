@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Therapist Profile</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #faf7f4;
+      color: #2d2d2d;
+      margin: 0;
+      padding: 0;
+    }
+
+    .profile-container {
+      max-width: 900px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      padding: 30px;
+    }
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .profile-header img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #d9c1aa;
+    }
+
+    .profile-header h2 {
+      font-size: 28px;
+      margin: 0;
+      color: #533c2c;
+    }
+
+    .profile-details {
+      margin-top: 30px;
+      line-height: 1.8;
+    }
+
+    .profile-details h3 {
+      color: #7a5e4a;
+      margin-bottom: 10px;
+    }
+
+    .profile-details p {
+      margin: 5px 0;
+    }
+
+    .rating {
+      color: #f5a623;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    .book-btn {
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: #eddddd;
+      border: none;
+      border-radius: 8px;
+      color: #2d2d2d;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .book-btn:hover {
+      background-color: #e9c4c4;
+    }
+
+    .reviews {
+      margin-top: 50px;
+    }
+
+    .review {
+      background: #f6f1ed;
+      border-left: 2px solid #babab9;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+
+    .review strong {
+      color: #533c2c;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="profile-container">
+    <div class="profile-header">
+      <img src="../image/320x400.jpeg" alt="Dr. Leila Mansour" />
+      <div>
+        <h2>Dr. Leila Mansour</h2>
+        <p>Clinical Psychologist | Cognitive Behavioral Therapy</p>
+        <div class="rating">★★★★☆ (4.8)</div>
+      </div>
+    </div>
+
+    <div class="profile-details">
+      <h3>Bio</h3>
+      <p style="font-weight: bold;">Helping individuals find clarity, strength, and purpose through CBT and mindfulness practices. I specialize in treating anxiety, trauma, and stress-related disorders.</p>
+
+      <h3>Experience</h3>
+      <p style="font-weight: bold;">10+ Years of Clinical Experience</p>
+
+      <h3>Certifications</h3>
+      <p style="font-weight: bold;">Licensed Clinical Psychologist, Certified CBT Practitioner, Mental Health First Aid Trainer</p>
+
+      <h3>Availability</h3>
+      <p style="font-weight: bold;">Mon - Thu, 10:00 AM to 6:00 PM</p>
+<br>
+      <a  href="book.html" class="book-btn" style="text-decoration: none;">Book a Session</a>
+    </div>
+
+    <div class="reviews">
+      <h3>Patient Reviews</h3>
+      <div class="review">
+        <strong>Lina:</strong> “Dr. Leila helped me open up and finally get the help I needed. She’s patient, kind, and insightful.”
+      </div>
+      <div class="review">
+        <strong>Amine:</strong> “She helped me through my darkest moments. I felt truly heard.”
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

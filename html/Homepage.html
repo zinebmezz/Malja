@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="../css/index1.css">
+</head>
+<body>
+  
+
+  <div class="main">
+    <div class="navbar">
+      <div class="icon">
+        <h2 class="logo">Maljā</h2>
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li><a href="../html/Homepage.html">HOME</a></li>
+          <li><a href="../html/about.html">ABOUT</a></li>
+          <li><a href="#service">SERVICES</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+          <li><a href="#" id="login-btn">LOGIN</a></li>
+          <li><a href="#" id="signup-btn">SIGNUP</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+  <div class="modal-overlay" id="login-modal">
+  <div class="modal">
+    <h3>Login</h3>
+    <form action="../php/login.php" method="POST">
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="#" id="signup-link">Sign Up</a></p>
+    <p>Forgot your password? <a href="../html/forgotpassword.html">Reset it</a></p>
+  </div>
+</div>
+
+ 
+ <div class="modal-overlay" id="signup-modal">
+  <div class="modal">
+    <h3>Sign Up</h3>
+    <form action="../php/signup.php" method="POST">
+      <input type="text" name="full_name" placeholder="Username" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+
+     
+      <div class="age-group">
+        <p>Are you a:</p>
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="age" value="Kid" required> Kid
+          </label>
+          <label>
+            <input type="radio" name="age" value="Teen" required> Teen
+          </label>
+          <label>
+            <input type="radio" name="age" value="Adult" required> Adult
+          </label>
+        </div>
+      </div>
+
+   
+      <div class="radio-group">
+        <label>
+          <input type="radio" name="gender" value="female" required> Female
+        </label>
+        <label>
+          <input type="radio" name="gender" value="male" required> Male
+        </label>
+      </div>
+
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <p>Already have an account? <a href="#" id="login-link">Login</a></p>
+    <p>Are you a therapist? <a href="therapistsignup.html" id="therapist-link">Press here</a></p>
+  </div>
+</div>
+
+  
+  <div class="modal-overlay" id="therapist-modal" style="display: none;">
+    <div class="modal">
+      <h3>Therapist Sign Up</h3>
+    
+      <a href="#" id="signup-back-link">Back</a>
+    </div>
+  </div>
+        
+        <div class="content">
+            <h1> <br> <span>ملجأ | Maljā 
+               
+              <div class="desc"> A place to begin again. </div></span> 
+              </h1>
+              <br>
+            <p class="par">Maljā is an online therapy platform designed to provide :
+              <br> comfort, support, and professional mental health 
+               are in a private and secure environment.<br> Whether you’re struggling with: anxiety, trauma, stress, or just need someone to talk to,<br> 
+            Malja’ connects you with trusted therapists who understand and care.</p>
+                
+             
+            
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h2 class="searchfor"> Search for a therapist based on your needs!</h2>
+                <br>
+                <div class="search">
+                  <input class="srch" type="isearch" name="" placeholder="Search by name, specialization, or issue...">
+                  <a href="#cta-section"> <button class="btn">Search</button></a>
+              </div>
+              <br>
+                <br>   
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+              
+                   
+      <div class="services-section" id="service">
+  <h2 class="services-title">Our Services</h2>
+  <div class="services-grid">
+
+    <a href="../html/therapistsearch.html" class="service-card">
+      <img src="../image/talking.png" alt="Individual Counselling">
+      <h4>Individual Counselling</h4>
+    </a>
+
+    <a href="../html/therapistsearch.html" class="service-card">
+      <img src="../image/psychiatrist.png" alt="Psychiatric Consultation">
+      <h4>Psychiatric Consultation</h4>
+    </a>
+
+    <a href="../html/therapistsearch.html" class="service-card">
+      <img src="../image/wedding-ring.png" alt="Couple Counselling">
+      <h4>Couple Counselling</h4>
+    </a>
+
+    <a href="../html/therapistsearch.html" class="service-card">
+      <img src="../image/siblings.png" alt="Teen Therapy">
+      <h4>Teen Therapy</h4>
+    </a>
+
+    <a href="../html/therapistsearch.html" class="service-card">
+      <img src="../image/children.png" alt="Kids Therapy">
+      <h4>Kids Therapy</h4>
+    </a>
+
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+                    <section style="background-color: #eddddd; padding: 40px; border-radius: 15px; margin-top: 40px;">
+  <h2 style="text-align: center; font-family: Verdana; font-size: 28px; color: #5a4637;">How It Works</h2>
+  <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 30px;">
+    <div style="flex: 1; min-width: 200px; max-width: 300px; text-align: center; padding: 20px;">
+      <img src="../image/sign-up.png" alt="Sign Up" width="80" height="80" style="margin-bottom: 15px;">
+      <h4 style="color: #a07e5d;">Step 1: Sign Up</h4>
+      <p style="color: #333;">Create your account as a patient or therapist in just a few clicks.</p>
+    </div>
+    <div style="flex: 1; min-width: 200px; max-width: 300px; text-align: center; padding: 20px;">
+      <img src="../image/seeker.png" alt="Choose" width="80" height="80" style="margin-bottom: 15px;">
+      <h4 style="color: #a07e5d;">Step 2: Choose Therapist</h4>
+      <p style="color: #333;">Browse verified therapists and find one that suits your needs.</p>
+    </div>
+    <div style="flex: 1; min-width: 200px; max-width: 300px; text-align: center; padding: 20px;">
+      <img src="../image/schedule.png" alt="Session" width="80" height="80" style="margin-bottom: 15px;">
+      <h4 style="color: #a07e5d;">Step 3: Start Healing</h4>
+      <p style="color: #333;">Book a session and begin your private, judgment-free journey.</p>
+    </div>
+  </div>
+</section>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                         <div class="area">
+  <h2 class="areatitle">Area Of Expertise</h2>
+  <div class="expertise-grid">
+    
+    <div class="expertise-item">
+      <img src="../image/anxiety.png" alt="Anxiety">
+      <h3>Anxiety</h3>
+    </div>
+
+    <div class="expertise-item">
+      <img src="../image/depression.png" alt="Depression">
+      <h3>Depression</h3>
+    </div>
+
+    <div class="expertise-item">
+      <img src="../image/kitchen.png" alt="OCD">
+      <h3>OCD</h3>
+    </div>
+
+    <div class="expertise-item">
+      <img src="../image/remember.png" alt="PTSD">
+      <h3>PTSD</h3>
+    </div>
+
+    <div class="expertise-item">
+      <img src="../image/drug-addict.png" alt="Addiction">
+      <h3>Addiction</h3>
+    </div>
+
+    <div class="expertise-item">
+      <img src="../image/interaction.png" alt="Relationships">
+      <h3>Relationships</h3>
+    </div>
+
+    <div class="expertise-item">
+      <img src="../image/fear.png" alt="Stress">
+      <h3>Stress</h3>
+    </div>
+    </div>
+
+ 
+</div>
+                         <br>
+                         <br>
+                         <br>
+                         <br>
+                
+                     
+                      <div class="rowrow-padded">  
+                                  <div class="col-md-6">
+                                    <div class="fh5co-food-menu to-animate-2" style="padding-right: 20px;">
+                                      <h2 class="fh5co-drinks" style="padding-left: 39%; font-size: 30px; font-family: Verdana; padding-bottom: 30px;">Most Viewed Therapists</h2>
+                                      <ul>
+                                
+                                        <li>
+                                          <div class="fh5co-food-desc">
+                                            <img src="../image/320x400.jpeg" class="img-responsive therapist-img" alt="Dr. Leila Mansour">
+                                            <h3>Dr. Leila Mansour</h3>
+                                            <p>Clinical Psychologist | 10+ years experience.</p>
+                                          </div>
+                                          <div class="fh5co-food-pricing">
+                                            “Helping individuals find clarity, strength, and purpose through Cognitive Behavioral Therapy and mindfulness practices.”
+                                          <br>
+                                            <a href="../html/viewprofile.html" class="view-profile-btn">View Profile</a>
+                                          </div>
+                                        </li>
+                                
+                                        <li>
+                                          <div class="fh5co-food-desc">
+                                            <img src="../image/320x400-2.jpeg" class="img-responsive therapist-img" alt="Youssef Haddad">
+                                            <h3>Youssef Haddad M.A.</h3>
+                                            <p>Licensed Psychotherapist | Trauma & Anxiety Specialist</p>
+                                          </div>
+                                          <div class="fh5co-food-pricing">
+                                            “I support clients in healing from past trauma and building healthy emotional habits. Your mental health matters.”
+                                          <br>
+                                           <a href="../html/viewprofile.html" class="view-profile-btn">View Profile</a>
+                                         
+                                          </div>
+                                        </li>
+                                
+                                        <li>
+                                          <div class="fh5co-food-desc">
+                                            <img src="../image/320x400-3.jpeg" class="img-responsive therapist-img" alt="Sarah Khalil">
+                                            <h3>Sarah Khalil, M.Sc.</h3>
+                                            <p>Child & Adolescent Therapist</p>
+                                          </div>
+                                          <div class="fh5co-food-pricing">
+                                          “Dedicated to helping children and teens navigate challenges with compassion, creativity, and proven therapeutic tools.”
+                                          <br>
+                                          <a href="../html/viewprofile.html" class="view-profile-btn">View Profile</a>
+                                        </div>
+                                        </li>
+                                
+                                        <li>
+                                          <div class="fh5co-food-desc">
+                                            <img src="../image/320x400-4.jpeg" class="img-responsive therapist-img" alt="Dr. Karim Saadi">
+                                            <h3>Dr. Karim Saadi</h3>
+                                            <p>Psychiatrist | Adult Mental Health</p>
+                                          </div>
+                                          <div class="fh5co-food-pricing">
+                                            “I combine medical expertise and talk therapy to support those living with depression, anxiety, and mood disorders.”
+                                          <br>
+                                            <a href="../html/viewprofile.html" class="view-profile-btn">View Profile</a>
+                                          </div>
+                                        </li>
+                                
+                                      </ul>
+                                    </div>
+                                  </div>
+                                
+                                <div class="col-md-6">
+                                  <div class="fh5co-food-menu to-animate-2 text-center" style="padding-right: 20px;">
+                                    <ul class="list-unstyled">
+                                
+                                      <li>
+                                        <div class="fh5co-food-desc">
+                                          <img src="../image/320x400-5.jpeg" class="img-responsive therapist-img center-block" alt="Dr. Rana Taha">
+                                          <h3>Dr. Rana Taha</h3>
+                                          <p>Clinical Therapist | Relationship & Family Issues</p>
+                                        </div>
+                                        <div class="fh5co-food-pricing">
+                                          “Working with couples and families to rebuild trust, communication, and emotional connection.”
+                                          <br>
+                                           <a href="../html/viewprofile.html" class="view-profile-btn">View Profile</a>
+                                        </div>
+                                      </li>
+                                
+                                      <li>
+                                        <div class="fh5co-food-desc">
+                                          <img src="../image/320x400-6.jpeg" class="img-responsive therapist-img center-block" alt="Omar Bayoudh">
+                                          <h3>Omar Bayoudh, LCSW</h3>
+                                          <p>Licensed Clinical Social Worker | Teen Mental Health</p>
+                                        </div>
+                                        <div class="fh5co-food-pricing">
+                                          “Empowering adolescents to understand their emotions, build self-esteem, and overcome life’s stressors.”
+                                           <br>
+                                          <a href="../html/viewprofile.html" class="view-profile-btn">View Profile</a>
+                                        </div>
+                                      </li>
+                                
+                                      <li>
+                                        <div class="fh5co-food-desc">
+                                          <img src="../image/320x400-8.jpeg" class="img-responsive therapist-img center-block" alt="Dr. Hiba Selim">
+                                          <h3>Dr. Hiba Selim</h3>
+                                          <p>Psychologist | Burnout & Workplace Stress</p>
+                                        </div>
+                                        <div class="fh5co-food-pricing">
+                                          “Helping professionals manage pressure, restore balance, and develop healthy coping strategies.”
+                                           <br>
+                                          <a href="../html/viewprofile.html" class="view-profile-btn">View Profile</a>
+                                        </div>
+                                      </li>
+                                
+                                      <li>
+                                        <div class="fh5co-food-desc">
+                                          <img src="../image/320x400-7.jpeg" class="img-responsive therapist-img center-block" alt="Ahmed Nour">
+                                          <h3>Ahmed Nour, M.A.</h3>
+                                          <p>Counseling Psychologist | Addiction Recovery</p>
+                                        </div>
+                                        <div class="fh5co-food-pricing">
+                                          “Supporting recovery journeys with compassion, structure, and evidence-based techniques.”
+                                           <br>
+                                          <a href="../html/viewprofile.html" class="view-profile-btn">View Profile</a>
+                                        </div>
+                                      </li>
+                                
+                                    </ul>
+                                  </div>
+                                </div>
+                   
+                 
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section class="testimonials">
+  <h2>What Our Users Say</h2>
+  <div class="testimonial-container">
+    <div class="testimonial-card">
+      <p class="quote">“Maljā helped me open up and finally get the help I needed.”</p>
+      <p class="user">– Maria</p>
+    </div>
+    <div class="testimonial-card">
+      <p class="quote">“I felt safe and heard. It’s everything I needed.”</p>
+      <p class="user">– Amine</p>
+    </div>
+    <div class="testimonial-card">
+      <p class="quote">“I never thought online therapy could feel so personal. Thank you!”</p>
+      <p class="user">– Samir</p>
+    </div>
+  </div>
+</section>
+ <br>
+<br> 
+<br>
+<br>
+<section class="cta-section">
+  <h2>Start your healing journey with <span class="malja">Maljā</span> today.</h2>
+  <div class="cta-buttons">
+   <a class="btn-cta" href="signup.html">Sign Up as a Patient</a>
+    <a href="therapistsignup.html" class="btn-cta">Sign Up as a Therapist</a>
+  </div>
+</section>
+<br>
+<br>
+<section class="quick-access">
+  <h2 class="section-title">Quick Access</h2>
+  <div class="quick-cards">
+    <a href="../html/therapistsearch.html" class="quick-card">
+      <img src="../image/schedule.png" alt="Book Session">
+      <p>View Upcoming Sessions</p>
+    </a>
+    <a href="../html/therapistsearch.html" class="quick-card">
+      <img src="../image/therapist.png" alt="Meet Therapists">
+      <p>Meet Therapists</p>
+    </a>
+    <a href="../html/offers.html" class="quick-card">
+      <img src="../image/cashless-payment.png" alt="Pricing">
+      <p>View Pricing</p>
+    </a>
+  </div>
+</section>
+  <br>
+  <br>
+  <br>
+  <br>
+  <section style="margin-top: 50px; padding: 30px; background-color:#eddddd; border-radius: 15px;">
+  <h2 style="text-align: center; font-family: Verdana; font-size: 28px; color: #5a4637;">Frequently Asked Questions</h2>
+  <div style="max-width: 800px; margin: 30px auto;">
+    <p><strong style="color: #a07e5d;">Q: Is therapy confidential?</strong></p>
+    <p style="margin-bottom: 20px;">A: Absolutely. All sessions are encrypted and private between you and your therapist.</p>
+    
+    <p><strong style="color: #a07e5d;">Q: How do I pay for sessions?</strong></p>
+    <p style="margin-bottom: 20px;">A: After your therapist confirms a booking, you'll receive secure payment options.</p>
+
+    <p><strong style="color: #a07e5d;">Q: Can I choose a therapist based on language or gender?</strong></p>
+    <p style="margin-bottom: 20px;">A: Yes, our search filters help you find therapists that match your preferences.</p>
+  </div>
+</section>
+
+  </div>
+<br>
+        <br>
+        <br>
+        <br><br>
+        <br>
+        <br>
+        <br>
+   
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <footer class="civil-state-footer">
+        <div class="container">
+          <div class="footer-content">
+          
+            <div class="footer-logo">
+              <h3>Maljā </h3>
+
+            </div>
+      
+           
+            <div class="footer-menu">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+      
+           
+            <div id="contact" class="footer-contact">
+              <h4>Contact Us</h4>
+              <p>Email: info@Malja.com</p>
+              <p>Phone: +123 456 7890</p>
+              <p>Address: Annaba, Annaba, Algeria</p>
+            </div>
+          </div>
+      
+      </footer>
+
+      <script>
+        const loginBtn = document.getElementById('login-btn');
+        const loginModal = document.getElementById('login-modal');
+        const signupBtn = document.getElementById('signup-btn');
+        const signupModal = document.getElementById('signup-modal');
+        const signupLink = document.getElementById('signup-link');
+        const loginLink = document.getElementById('login-link');
+        const therapistLink = document.getElementById('therapist-link');
+        const therapistModal = document.getElementById('therapist-modal');
+        const signupBackLink = document.getElementById('signup-back-link');
+    
+        loginBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          loginModal.classList.add('active');
+        });
+    
+        signupBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          signupModal.classList.add('active');
+        });
+    
+        signupLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          loginModal.classList.remove('active');
+          signupModal.classList.add('active');
+        });
+    
+        loginLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          signupModal.classList.remove('active');
+          loginModal.classList.add('active');
+        });
+    
+        [loginModal, signupModal, therapistModal].forEach(modal => {
+          if (modal) {
+            modal.addEventListener('click', (e) => {
+              if (e.target === modal) {
+                modal.classList.remove('active');
+              }
+            });
+          }
+        });
+      </script>
+</body>
+</html>
+

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Therapist Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background:rgb(250, 252, 251);
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      background: #eddddd;
+      color: rgb(35, 31, 31);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px;
+    }
+    section {
+      background: #ffffff;
+      padding: 1rem 2rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-top: 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      padding: 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    button {
+      background:#eddddd;
+      color: rgb(41, 36, 36);
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background:#f5d5d5;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .message {
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .buttons{
+  display: flex;
+  gap: 20px;
+    }
+    .review {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+.review p {
+  margin: 0.5rem 0;
+}
+  
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="color: #000;">Welcome, Dr. Leila</h1>
+    <a href="../html/complete.html" style="color: #000; font-size: 20px; font-weight: bold; text-decoration: none; padding: 10px 20px; border: 1px solid #000; border-radius: 5px;">Complete your profile</a>
+    <button style="color: #000; font-size: 20px; font-weight: bold;">Logout</button>
+  </header>
+<br>
+<br>
+  
+  <section>
+    <h2>Upcoming Sessions</h2>
+    <table>
+      <tr><th>Patient</th><th>Date</th><th>Time</th><th>Link</th></tr>
+      <tr><td>Sarah M.</td><td>2024-05-12</td><td>14:00</td><td><a href="#" style="text-decoration: none; color: rgb(25, 83, 107); font-weight: bolder;">Join</a></td></tr>
+      <tr><td>Youssef A.</td><td>2024-05-13</td><td>10:00</td><td><a href="#" style="text-decoration: none; color: rgb(25, 83, 107);font-weight: bolder;">Join</a></td></tr>
+      <tr><td>Rania F.</td><td>2024-05-13</td><td>18:00</td><td><a href="#" style="text-decoration: none; color: rgb(25, 83, 107); font-weight: bolder;">Join</a></td></tr>
+    </table>
+  </section>
+
+<br>
+
+  <section>
+    <h2>Booking Requests</h2>
+    <div>
+      <p><strong>Ali K.</strong> — 2024-05-13 at 16:00</p>
+     <div class="buttons"> <button style="background-color: rgb(167, 208, 167); color: #000;">Accept</button><button style="background-color: rgb(230, 152, 152);color: #000;">Reject</button></div>
+    </div>
+    <div>
+      <p><strong>Selma B.</strong> — 2024-05-14 at 11:30</p>
+      <div class="buttons"> <button style="background-color: rgb(167, 208, 167); color: #000;">Accept</button><button style="background-color: rgb(230, 152, 152);color: #000;">Reject</button></div>
+    </div>
+    <div>
+      <p><strong>Mourad Z.</strong> — 2024-05-15 at 09:00</p>
+      <div class="buttons"> <button style="background-color: rgb(167, 208, 167); color: #000;">Accept</button><button  style="background-color: rgb(230, 152, 152);color: #000;">Reject</button></div>
+    </div>
+  </section>
+ 
+<br>
+ 
+  <section>
+    <h2>Availability Settings</h2>
+    <form style="display: flex; flex-direction: column; gap: 10px; padding-left: 500px;">
+      <label >Available Day</label>
+      <select style=" max-width: 215px;" >
+        <option>Sunday</option>
+        <option>Monday</option>
+        <option>Tuesday</option>
+        <option>Wednesday</option>
+        <option> Thursday</option>
+      </select>
+  
+      <label >Start Time</label>
+      <input type="time" style="font-size: 14px; padding: 4px; max-width: 200px;">
+  
+      <label >End Time</label>
+      <input type="time" style="font-size: 14px; padding: 4px; max-width: 200px;">
+  
+      <button type="submit" style=" margin-left: 70px; max-width: 80px; padding: 6px 10px; color: #000;">Save</button>
+    </form>
+  </section>
+  <br>
+  <section>
+    <h2>Patient Reviews</h2>
+    <div class="overall-rating" style="font-size: 1.2rem; margin-bottom: 1rem;">
+      ⭐ Overall Rating: <strong>4.7 / 5</strong> (based on 36 reviews)
+    </div>
+  
+    <div class="review">
+      <p><strong>Sarah M.</strong> — <em>Rated: 5 ★</em></p>
+      <p>"Absolutely wonderful experience. I feel more in control of my anxiety."</p>
+    </div>
+  
+    <div class="review">
+      <p><strong>Youssef A.</strong> — <em>Rated: 4 ★</em></p>
+      <p>"Very helpful session. Looking forward to the next one."</p>
+    </div>
+  
+    <div class="review">
+      <p><strong>Rania F.</strong> — <em>Rated: 5 ★</em></p>
+      <p>"The therapist was kind, understanding, and truly insightful."</p>
+    </div>
+  </section>
+<br>
+  <section>
+    <h2>Edit Profile</h2>
+
+    <div id="profile-display">
+  <img id="profile-pic" src="../image/320x400-5.jpeg" alt="Profile Picture" width="100" height="100" style="border-radius: 50%; margin-bottom: 10px;">
+  <p><strong>Experience: +4</strong> <span id="display-experience"><?= htmlspecialchars($experience) ?> years</span></p>
+  <p><strong>Specialization: Trauma</strong> <span id="display-specialization"><?= htmlspecialchars($specialization) ?></span></p>
+  <p><strong>Bio:I strongly believe healing starts with seeking help</strong> <span id="display-bio"><?= htmlspecialchars($bio) ?></span></p>
+  <p><strong>Certifications:CTD</strong> <span id="display-certifications"><?= htmlspecialchars($certifications) ?>, License #2000<?= htmlspecialchars($license) ?></span></p>
+  <button onclick="showEditForm()" style="color: #000;">Update Profile</button>
+</div>
+   <section>
+    <form id="edit-profile-form" style="display: none;" onsubmit="return true;" method="POST" enctype="multipart/form-data" action="../php/update-profile.php">
+  <label>Change Profile Picture</label>
+  <input type="file" name="profile_pic" id="profile-pic-input" accept="image/*">
+
+  <label>Specialization</label>
+  <input type="text" name="specialization" id="input-specialization">
+
+  <label>Bio</label>
+  <textarea name="bio" id="input-bio"></textarea>
+
+  <button type="submit">Save</button>
+  <button type="button" onclick="cancelEdit()" style="color: #000;">Cancel</button>
+</form>
+  </section>
+<br>
+ 
+  <section>
+    <h2>Messages</h2>
+    <div class="message">
+      <strong>Sarah:</strong> Thank you for today’s session!
+    </div>
+    <div class="message">
+      <strong>Omar:</strong> Will tomorrow’s session be on the same link?
+    </div>
+    <div class="message">
+      <strong>Rania:</strong> I’d like to reschedule if possible.
+    </div>
+  </section>
+
+  <script>
+    function showEditForm() {
+     
+      document.getElementById('input-specialization').value = document.getElementById('display-specialization').innerText;
+      document.getElementById('input-bio').value = document.getElementById('display-bio').innerText;
+      
+  
+   
+      document.getElementById('profile-display').style.display = 'none';
+      document.getElementById('edit-profile-form').style.display = 'block';
+    }
+  
+    function saveProfile(event) {
+      event.preventDefault();
+  
+   
+      document.getElementById('display-specialization').innerText = document.getElementById('input-specialization').value;
+      document.getElementById('display-bio').innerText = document.getElementById('input-bio').value;
+      
+  
+    
+      const picInput = document.getElementById('profile-pic-input');
+      if (picInput.files && picInput.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          document.getElementById('profile-pic').src = e.target.result;
+        };
+        reader.readAsDataURL(picInput.files[0]);
+      }
+  
+   
+      document.getElementById('profile-display').style.display = 'block';
+      document.getElementById('edit-profile-form').style.display = 'none';
+    }
+  
+    function cancelEdit() {
+      document.getElementById('edit-profile-form').style.display = 'none';
+      document.getElementById('profile-display').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

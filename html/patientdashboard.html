@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: rgb(250, 252, 251);
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      background: #eddddd;
+      color: rgb(27, 24, 24);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px;
+    }
+    section {
+      background: #ffffff;
+      padding: 1rem 2rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-top: 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      padding: 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    button {
+      background: #eddddd;
+      color: rgb(35, 31, 31);
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #edcfcf;
+    }
+    .message {
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="color: #000;">Welcome, Doha</h1>
+    <button style="color: #000; font-size: 20px; font-weight: bold;">Logout</button>
+  </header>
+<br>
+<br>
+  <section>
+    <h2>Upcoming Sessions</h2>
+    <table>
+      <tr><th>Therapist</th><th>Date</th><th>Time</th><th>Link</th></tr>
+      <tr><td>Dr. Leila Mansour</td><td>2024-05-12</td><td>14:00</td><td><a href="#"style="text-decoration: none; color: rgb(25, 83, 107); font-weight: bolder;">Join</a></td></tr>
+      <tr><td>Omar Bayoudh</td><td>2024-05-15</td><td>16:00</td><td><a href="#"style="text-decoration: none; color: rgb(25, 83, 107); font-weight: bolder;">Join</a></td></tr>
+    </table>
+  </section>
+<br>
+<section>
+    <h2>Session Booking Status</h2>
+    <table>
+      <tr><th>Therapist</th><th>Date</th><th>Time</th><th>Status</th></tr>
+      <tr>
+        <td>Dr. Leila Mansour</td>
+        <td>2024-05-14</td>
+        <td>11:00</td>
+        <td style="color: orange; font-weight: bold;">Pending</td>
+      </tr>
+      <tr>
+        <td>Dr. Hiba Selim</td>
+        <td>2024-05-10</td>
+        <td>16:30</td>
+        <td style="color: green; font-weight: bold;">Accepted</td>
+      </tr>
+      <tr>
+        <td>Omar Bayoudh</td>
+        <td>2024-05-08</td>
+        <td>09:00</td>
+        <td style="color: red; font-weight: bold;">Rejected</td>
+      </tr>
+    </table>
+  </section>
+  <br>
+  <section>
+    <h2>Session History</h2>
+    <table>
+      <tr><th>Therapist</th><th>Date</th><th>Feedback</th></tr>
+      <tr><td>Karim Saadi</td><td>2024-05-01</td><td>Great session, very helpful.</td></tr>
+    </table>
+  </section>
+<br>
+  <section>
+    <h2>Messages</h2>
+    <div class="message"><strong>Dr. Leila:</strong> Don’t forget your homework exercise 😊</div>
+    <div class="message"><strong>Support:</strong> Your session link was updated</div>
+  </section>
+  <br>
+  <section>
+    <h2>Edit Profile</h2>
+    <div id="profile-display">
+      <img id="profile-pic" src="../image/320x400-3.jpeg" alt="Profile Picture" width="100" height="100" style="border-radius: 50%; margin-bottom: 10px;">
+      <p><strong>Age:</strong> <span id="display-age">25</span></p>
+      <p><strong>Gender:</strong> <span id="display-gender">Female</span></p>
+      <p><strong>Therapy Preferences:</strong> <span id="display-preferences">Remote sessions, Cognitive therapy</span></p>
+      <button onclick="showEditForm()">Update Profile</button>
+    </div>
+    </section>
+    <br>
+    <section>
+        <h2>Upload Your Medical File</h2>
+        <form>
+          <label for="patient-file">Upload PDF or DOC File</label>
+          <br>
+          <input style="width: 400px;" type="file" id="patient-file" accept=".pdf, .doc, .docx">
+          <button type="submit" style="margin-left: 20px;">Upload</button>
+        </form>
+        <br>
+        <p><strong>Latest Uploaded File:</strong> <a href="#"style="text-decoration: none; color: rgb(25, 83, 107); font-weight: bolder;">View My File</a></p>
+      </section>
+<section>
+    <form id="edit-profile-form" style="display: none;" onsubmit="saveProfile(event)">
+      <label>Change Profile Picture</label>
+      <input type="file" id="profile-pic-input" accept="image/*">
+
+      <label>Therapy Preferences</label>
+      <textarea id="input-preferences"></textarea>
+
+      <button type="submit">Save</button>
+      <button type="button" onclick="cancelEdit()">Cancel</button>
+    </form>
+  </section>
+
+  <script>
+    function showEditForm() {
+      document.getElementById('input-preferences').value = document.getElementById('display-preferences').innerText;
+      document.getElementById('profile-display').style.display = 'none';
+      document.getElementById('edit-profile-form').style.display = 'block';
+    }
+
+    function saveProfile(event) {
+      event.preventDefault();
+      document.getElementById('display-preferences').innerText = document.getElementById('input-preferences').value;
+      const picInput = document.getElementById('profile-pic-input');
+      if (picInput.files && picInput.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          document.getElementById('profile-pic').src = e.target.result;
+        };
+        reader.readAsDataURL(picInput.files[0]);
+      }
+      document.getElementById('edit-profile-form').style.display = 'none';
+      document.getElementById('profile-display').style.display = 'block';
+    }
+
+    function cancelEdit() {
+      document.getElementById('edit-profile-form').style.display = 'none';
+      document.getElementById('profile-display').style.display = 'block';
+    }
+ </script>
+    <script>
+    const fileInput = document.getElementById('patient-file');
+    const fileLink = document.querySelector('a');
+  
+    fileInput.addEventListener('change', () => {
+      if (fileInput.files.length > 0) {
+        fileLink.innerText = fileInput.files[0].name;
+      }
+    });
+  </script>
+</body>
+</html>

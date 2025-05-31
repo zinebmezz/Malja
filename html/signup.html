@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Therapist Sign Up</title>
+  <link rel="stylesheet" href="../css/signup.css">
+</head>
+<body>
+  <main>
+    <form>
+
+      
+    <div class="modal-overlay" id="signup-modal">
+    <div class="modal">
+      <h3>Sign Up</h3>
+      <form>
+        <input type="text" placeholder="Username" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+       
+        <div class="age-group">
+          <p>Are you a:</p>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="age-group" value="kid" required> Kid
+            </label>
+            <label>
+              <input type="radio" name="age-group" value="teen" required> Teen
+            </label>
+            <label>
+              <input type="radio" name="age-group" value="adult" required> Adult
+            </label>
+          </div>
+
+      <div class="radio-group">
+        <label>
+          <input type="radio" name="gender" value="female" required> Female
+        </label>
+        <label>
+          <input type="radio" name="gender" value="male" required> Male
+        </label>
+      </div>
+        </div>
+        <button type="submit">Sign Up</button>
+      </form>
+      <p>Already have an account? <a href="#" id="login-link">Login</a></p>
+      <p>Are you a therapist? <a href="therapistsignup.html" id="therapist-link">Press here</a></p>
+    </div>
+  </div>
+    </form>
+  </main>
+</body>
+</html>

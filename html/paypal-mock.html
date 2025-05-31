@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PayPal - Complete Your Payment</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", sans-serif;
+      background-color: #f5f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .paypal-box {
+      background-color: white;
+      width: 400px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .paypal-logo {
+      margin-bottom: 20px;
+    }
+    .paypal-logo img {
+      width: 150px;
+    }
+    h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .amount {
+      font-size: 24px;
+      margin-bottom: 30px;
+      color: #111;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .btn-pay {
+      background-color: #0070ba;
+      color: white;
+    }
+    .btn-cancel {
+      background-color: #e0e0e0;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<div class="paypal-box">
+  <div class="paypal-logo">
+    <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal Logo">
+  </div>
+
+  <h2>Complete Your Payment</h2>
+  <p class="amount">2,000 DZD</p>
+
+  <button class="btn btn-pay" onclick="payNow()">Pay Now</button>
+  <button class="btn btn-cancel" onclick="cancel()">Cancel</button>
+</div>
+
+<script>
+  const returnUrl = "success.html";
+  const cancelUrl = "cancel.html";
+
+  function payNow() {
+  
+    window.location.href = returnUrl + "?status=success&amount=2000";
+  }
+
+  function cancel() {
+
+    window.location.href = cancelUrl + "?status=cancelled";
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+
+
+form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  max-width: 1000px;
+ 
+  margin: 2rem auto; 
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  padding-right: 30px;
+ 
+}
+.form-content{
+  padding-right: 25px;
+}
+
+form input,
+form select,
+form button {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding-right: 20px;
+}
+
+
+form input:focus,
+form select:focus {
+  outline: none;
+  border-color: #405851;
+}
+
+form button {
+  width: auto;
+  align-self: center; 
+  padding: 0.8rem 2rem; 
+  background: #eddddd;
+  color: #181414;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  padding-left: 45px;
+  width: 300px;
+  height: 50px;
+}
+.wilaya{
+  padding-left: 30px;
+  
+}
+form button:hover {
+  background: #daaeae;
+}
+
+form label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #0d0d0d;
+  margin-top: 0.2rem;
+}
+.age-group {
+  margin-top: 1rem;
+  width: 100%;
+}
+form p {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.age-group p {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.95rem;
+  color: #333;
+  padding-right: 160px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1.5rem;
+  padding-left: 30px;
+
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  color: #333;
+}
+.input-group {
+  display: flex;
+  gap: 0.5rem; 
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-left: 15px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-top: 1rem;
+  width: 100%;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.check input[type="checkbox"] {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  accent-color: #405851; 
+}
+
+.check label {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+.modal {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 300px;
+  padding-right: 60px;
+}
+
+.modal h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+.modal a {
+  color: #405851;
+  text-decoration: none;
+  font-size: 0.9rem;
+} 
+
+.modal input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-right: 10px;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.modal button {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5px;
+  background: #eddddd;
+  color: #1a1414;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modal button:hover {
+  background: #d6aaaa;
+}

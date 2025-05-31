@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Therapist Sign Up</title>
+  <link rel="stylesheet" href="../css/index1.css">
+</head>
+<body>
+  <main>
+    <form action="../php/therapist_signup.php" method="POST" enctype="multipart/form-data">
+        
+      <h1 class="titlethera">Therapist Sign Up</h1>
+      <div class="form-content">
+     <input type="text" name="full_name" placeholder="Full Name" required>
+<input type="email" name="email" placeholder="Email" required>
+<input type="password" name="password" placeholder="Password" required>
+<input type="password" name="confirm_password" placeholder="Confirm Password" required>
+<input type="number" name="license_number" placeholder="License number" required>
+    
+      
+ <div class="input-group">
+        <select id="country-code" required>
+          <option value="+213">+213 (Algeria)</option>
+        </select>
+        <input type="tel" name="phone_number" placeholder="Mobile Number" pattern="[0-9]{9}" required>
+      </div>
+
+      <div class="wilaya">
+      
+      <label for="wilaya">Select your Wilaya:</label>
+      <select id="wilaya" name="wilaya" required>
+        <option value="" disabled selected>Select your Wilaya</option>
+        <option value="Adrar">Adrar</option>
+        <option value="Chlef">Chlef</option>
+        <option value="Laghouat">Laghouat</option>
+        <option value="Oum El Bouaghi">Oum El Bouaghi</option>
+        <option value="Batna">Batna</option>
+        <option value="Béjaïa">Béjaïa</option>
+        <option value="Biskra">Biskra</option>
+        <option value="Béchar">Béchar</option>
+        <option value="Blida">Blida</option>
+        <option value="Bouira">Bouira</option>
+        <option value="Tamanrasset">Tamanrasset</option>
+        <option value="Tébessa">Tébessa</option>
+        <option value="Tlemcen">Tlemcen</option>
+        <option value="Tiaret">Tiaret</option>
+        <option value="Tizi Ouzou">Tizi Ouzou</option>
+        <option value="Algiers">Algiers</option>
+        <option value="Djelfa">Djelfa</option>
+        <option value="Jijel">Jijel</option>
+        <option value="Sétif">Sétif</option>
+        <option value="Saïda">Saïda</option>
+        <option value="Skikda">Skikda</option>
+        <option value="Sidi Bel Abbès">Sidi Bel Abbès</option>
+        <option value="Annaba">Annaba</option>
+        <option value="Guelma">Guelma</option>
+        <option value="Constantine">Constantine</option>
+        <option value="Médéa">Médéa</option>
+        <option value="Mostaganem">Mostaganem</option>
+        <option value="M'Sila">M'Sila</option>
+        <option value="Mascara">Mascara</option>
+        <option value="Ouargla">Ouargla</option>
+        <option value="Oran">Oran</option>
+        <option value="El Bayadh">El Bayadh</option>
+        <option value="Illizi">Illizi</option>
+        <option value="Bordj Bou Arréridj">Bordj Bou Arréridj</option>
+        <option value="Boumerdès">Boumerdès</option>
+        <option value="El Tarf">El Tarf</option>
+        <option value="Tindouf">Tindouf</option>
+        <option value="Tissemsilt">Tissemsilt</option>
+        <option value="El Oued">El Oued</option>
+        <option value="Khenchela">Khenchela</option>
+        <option value="Souk Ahras">Souk Ahras</option>
+        <option value="Tipaza">Tipaza</option>
+        <option value="Mila">Mila</option>
+        <option value="Aïn Defla">Aïn Defla</option>
+        <option value="Naâma">Naâma</option>
+        <option value="Aïn Témouchent">Aïn Témouchent</option>
+        <option value="Ghardaïa">Ghardaïa</option>
+        <option value="Relizane">Relizane</option>
+      </select>
+    </div>
+
+     
+      <div class="check">
+          <input type="checkbox" required>
+          <label>I am above 18</label>
+      </div>
+      <br>
+    
+      
+      <label for="cv-upload">Attach your CV:</label>
+      <input type="file" name="cv_file" id="cv-upload" accept=".pdf,.doc,.docx" required>
+<br>
+<br>
+      </div>
+   
+      <button class="button" type="submit">Sign Up</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

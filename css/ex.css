@@ -1,0 +1,44 @@
+.area {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f8f4f1;
+}
+
+.areatitle {
+  font-size: 30px;
+  font-family: 'Verdana', sans-serif;
+  color: #6f4e37;
+  margin-bottom: 50px;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+.expertise-item {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  width: 140px;
+  transition: transform 0.3s ease;
+}
+
+.expertise-item:hover {
+  transform: translateY(-5px);
+}
+
+.expertise-item img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+}
+
+.expertise-item h3 {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}

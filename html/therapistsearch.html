@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Find a Therapist - Malja’</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: rgb(249, 241, 241);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+   header {
+  background: rgb(249, 241, 241);
+  padding: 3rem 1rem 2rem;
+
+}
+
+.header-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #eadede;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.header-container h1 {
+  font-size: 2.4rem;
+  color: #4a3f35;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #27231e;
+  margin-bottom: 1.5rem;
+}
+    h1 {
+      color: #4a3f35;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .filters {
+
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 1.2rem 2rem;
+  margin: 0 auto 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 1000px;
+
+  transition: all 0.3s ease;
+}
+.filters input,
+.filters select {
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #232221;
+  font-size: 1rem;
+  background-color:#f0e8e8;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  color: #4a3f35;
+  transition: border 0.3s, box-shadow 0.3s;
+  min-width: 180px;
+}
+
+.filters input:focus,
+.filters select:focus {
+  outline: none;
+  border-color: #4e4c4a;
+  box-shadow: 0 0 0 3px rgba(191, 163, 136, 0.2);
+}
+.filters input:hover,
+.filters select:hover {
+  border-color: #c7ae94;
+}
+
+    .therapist-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 0 2rem 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      margin: 0.5rem 0 0.2rem;
+      color: #413f3e;
+    }
+
+    .card .specialization {
+      font-size: 0.95rem;
+      color:#413f3e;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    .rating {
+      color: #f4b400;
+      font-size: 1.1rem;
+      margin: 0.3rem 0 0.7rem;
+    }
+
+    .btn {
+      background-color: #ecd1d1;
+      color: #161212;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color:#dbc1c1;
+    }
+
+    @media (max-width: 600px) {
+      .filters {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+  <div class="header-container">
+    <h1>Meet Your Therapist</h1>
+    <p class="subtitle">Find support, healing, and guidance tailored to you</p>
+    <div class="filters">
+      <input class="search" type="text" id="searchInput" placeholder="Search by name" />
+      <select id="specializationFilter">
+        <option value="">All Specializations</option>
+        <option value="anxiety">Anxiety</option>
+        <option value="trauma">Trauma</option>
+        <option value="children">Children</option>
+        <option value="relationships">Relationships</option>
+        <option value="addiction">Addiction</option>
+      </select>
+      <select id="ratingFilter">
+        <option value="">All Ratings</option>
+        <option value="3">3★ and up</option>
+        <option value="4">4★ and up</option>
+        <option value="5">5★ only</option>
+      </select>
+    </div>
+  </div>
+</header>
+<br>
+
+  <section class="therapist-grid" id="therapistContainer">
+   
+  </section>
+
+  <script>
+    const therapists = [
+      {
+        name: "Dr. Leila Mansour",
+        image: "../image/320x400.jpeg",
+        specialization: "trauma",
+        rating: 4.8,
+        bio: "Helping individuals through trauma recovery and emotional growth.",
+      },
+      {
+        name: "Youssef Haddad M.A.",
+        image: "../image/320x400-2.jpeg",
+        specialization: "anxiety",
+        rating: 4.5,
+        bio: "Focused on anxiety and stress management for adults.",
+      },
+      {
+        name: "Sarah Khalil",
+        image: "../image/320x400-3.jpeg",
+        specialization: "children",
+        rating: 5,
+        bio: "Empowering children to navigate their mental health challenges.",
+      },
+      {
+        name: "Ahmed Nour",
+        image: "../image/320x400-7.jpeg",
+        specialization: "addiction",
+        rating: 4.2,
+        bio: "Guiding recovery journeys with empathy and proven techniques.",
+      },
+      {
+    name: "Maya Shams",
+    image: "../image/320x400-4.jpeg",
+    specialization: "relationships",
+    rating: 4.7,
+    bio: "Supporting couples and individuals in building healthy relationships.",
+  },
+  {
+    name: "Omar Zain",
+    image: "../image/320x400-5.jpeg",
+    specialization: "anxiety",
+    rating: 4.6,
+    bio: "Helping clients cope with anxiety through CBT and mindfulness.",
+  },
+  {
+    name: "Nadia Youssef",
+    image: "../image/320x400-6.jpeg",
+    specialization: "children",
+    rating: 4.9,
+    bio: "Child therapist with over 10 years experience in behavioral therapy.",
+  },
+  {
+    name: "Khaled Abadi",
+    image: "../image/320x400-8.jpeg",
+    specialization: "trauma",
+    rating: 4.4,
+    bio: "Working with trauma survivors to reclaim safety and confidence.",
+  },
+  {
+    name: "Dina Barakat",
+    image: "../image/320x400-9.jpeg",
+    specialization: "addiction",
+    rating: 4.3,
+    bio: "Helping individuals overcome addiction with compassion and structure.",
+  },
+  {
+    name: "Rami Taha",
+    image: "../image/320x400-10.jpeg",
+    specialization: "relationships",
+    rating: 4.6,
+    bio: "Offering insight and tools for meaningful personal connections.",
+  },
+  {
+    name: "Lina Farhat",
+    image: "../image/320x400-11.jpeg",
+    specialization: "anxiety",
+    rating: 4.8,
+    bio: "Dedicated to helping clients manage anxiety and build resilience.",
+  },
+  {
+    name: "Samir Kassem",
+    image: "../image/320x400-12.jpeg",
+    specialization: "trauma",
+    rating: 4.5,
+    bio: "Experienced in PTSD recovery and holistic trauma treatment.",
+  },
+
+    ];
+
+    const container = document.getElementById("therapistContainer");
+    const searchInput = document.getElementById("searchInput");
+    const specializationFilter = document.getElementById("specializationFilter");
+    const ratingFilter = document.getElementById("ratingFilter");
+
+    function displayTherapists(data) {
+      container.innerHTML = "";
+      if (data.length === 0) {
+        container.innerHTML = "<p style='text-align:center;'>No therapists found.</p>";
+        return;
+      }
+
+      data.forEach((t) => {
+        container.innerHTML += `
+          <div class="card">
+            <img src="${t.image}" alt="${t.name}" />
+            <h3>${t.name}</h3>
+            <div class="specialization">${capitalize(t.specialization)}</div>
+            <div class="rating">${"★".repeat(Math.floor(t.rating))} (${t.rating})</div>
+            <p>${t.bio}</p>
+            <a class="btn" href="../html/viewprofile.html?name=${encodeURIComponent(t.name)}">View Profile</a>
+          </div>`;
+      });
+    }
+
+    function filterTherapists() {
+      const search = searchInput.value.toLowerCase();
+      const spec = specializationFilter.value;
+      const minRating = parseFloat(ratingFilter.value) || 0;
+
+      const filtered = therapists.filter((t) => {
+        return (
+          t.name.toLowerCase().includes(search) &&
+          (spec === "" || t.specialization === spec) &&
+          t.rating >= minRating
+        );
+      });
+
+      displayTherapists(filtered);
+    }
+
+    function capitalize(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+    searchInput.addEventListener("input", filterTherapists);
+    specializationFilter.addEventListener("change", filterTherapists);
+    ratingFilter.addEventListener("change", filterTherapists);
+
+    displayTherapists(therapists);
+  </script>
+</body>
+</html>
